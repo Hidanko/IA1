@@ -1,0 +1,58 @@
+3	. Artigo de SE Fuzzy
+Escrever um artigo Sobre a apliacação implementada no trabalho anterior. O artigo deve seguir o formato de artigos da SBC (Sociedade Brasileria de Computação com no máximo 8 paginas em uma coluna, mas deve ser seguidas as normas da ABNT). Você pode aperfeiçoar seu sistema fuzzy considerando as críticas e sugestões feitas na apresentação do sistema. Abaixo estão os requisitos do seu artigo, que também serão utilizados como critérios de avaliação:
+
+O título reflete claramente o conteúdo do artigo.
+O resumo contém introdução ao problema, objetivos, métodos e principais resultados.
+O problema é contextualizado de modo apropriado (introdução).
+Os objetivos do estudo são apresentados de modo claro e são atingíveis (introdução).
+É apresentada uma definição e um breve histórico dos Sistemas Especialistas.
+Cita algum trabalho similar.
+É apresentada a arquitetura e funcionamento do SE Fuzzy.
+É descrito o método de criação e validação do SE Fuzzy proposto.
+São apresentadas as variáveis de entrada e de saída e suas funções de pertinência, assim como as regras.
+O comportamento do SE Fuzzy proposto é apresentado através de um estudo de caso.
+Os resultados do estudo são apresentados de modo claro.
+As imagens e quadros utilizados estão em resolução adequada.
+Os resultados são discutidos de modo coerente com a literatura.
+Conclui-se se os objetivos foram alcançados e são apresentadas as limitações do estudo.
+Traz sugestões para trabalhos futuros.
+ 
+Estrutura sugerida:
+Título
+Resumo
+Introdução
+Sistemas fuzzy
+Sistema fuzzy Proposto
+Estudo de Caso
+Conclusão
+Referências
+ 
+
+Dicas para o artigo:
+- Resumo
+Sintese em um paragrafo so do artigo
+- Introdução
+Apresentar o contexto do trabalho
+- Fundamentação
+Falar sobre fuzzy (funções de pertinencia, variavéis linguisticas, regras,...). 
+Falar sobre o tema da aplicação
+apresentar trabalhos similares (pode ser em formato de tabela, por exemplo)
+- Desenvolvimento
+Descrever justificando a modelagem realizada de forma detalhada
+- Resultados
+Mostrar que os resultados da aplicação são coerentes, por que, como....
+- Conclusões
+- Referencias Bibliográficas 
+Seguir as normas da ABNT
+ 
+
+Caderno de ensino da UNIVALI: Elaboração de trabalhos acadêmico-científicos
+
+ https://www.univali.br/vida-no-campus/biblioteca/cadernos-de-ensino/Documents/Elaboração%20de%20Trabalhos%20Acadêmico-Científicos.pdf
+ 
+ 
+ http://www.if.ufrgs.br/cref/leila/temp.htm
+ https://www.bbc.com/portuguese/brasil-46695306
+ 
+ http://novo.more.ufsc.br/artigo_revista/inserir_artigo_revista
+ 
