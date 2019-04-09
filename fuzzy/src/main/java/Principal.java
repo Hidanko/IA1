@@ -1,39 +1,31 @@
-import net.sourceforge.jFuzzyLogic.FIS;
-import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
-import net.sourceforge.jFuzzyLogic.rule.Variable;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
-public class Principal {
+public class Principal extends Application {
+	private Pane login;
 
+	public static void main(String[] args) throws Exception {
+		launch(args);
 
-    public static void main(String[] args) throws Exception{
-        System.out.println("Teste");
+	}
 
-        // Load from 'FCL' file
-        String fileName = "fcl/temperatura.fcl";
-        FIS fis = FIS.load(fileName,true);
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		primaryStage.setTitle("Controle de Temperatura Fuzzy");
+		primaryStage.getIcons().add(new Image(ClassLoader.getSystemResourceAsStream("css/icone.png")));
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Principal.class.getResource("tela.fxml"));
+		login = loader.load();
 
-        // Error while loading?
-        if( fis == null ) {
-            System.err.println("Can't load file: '" + fileName + "'");
-            return;
-        }
-
-        // Show
-        JFuzzyChart.get().chart(fis);
-
-        // Set inputs
-        fis.setVariable("temperatura_1", 0);
-        fis.setVariable("temperatura_2", 0);
-        fis.setVariable("temperatura_3", 0);
-
-        // Evaluate
-        fis.evaluate();
-
-        // Show output variable's chart
-        Variable acao = fis.getVariable("acao");
-        JFuzzyChart.get().chart(acao, acao.getDefuzzifier(), true);
-
-        // Print ruleSet
-        System.out.println(fis);
-    }
+		Scene scene = new Scene(login);
+		scene.getStylesheets().add(getClass().getClassLoader().getResource("css/bootstrap.css").toExternalForm());
+		primaryStage.setScene(scene);
+		primaryStage.setResizable(false);
+		primaryStage.setOnCloseRequest((e) -> System.exit(0));
+		primaryStage.show();
+	}
 }
