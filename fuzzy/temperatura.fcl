@@ -9,7 +9,7 @@ END_VAR
 
 // Define output variable
 VAR_OUTPUT
-	ar_condicionado : REAL;
+	acao : REAL;
 END_VAR
 
 FUZZIFY temperatura_1
@@ -30,7 +30,6 @@ FUZZIFY temperatura_3
 	TERM quente := (-2, 0) (4, 1);
 END_FUZZIFY
 
-// Defzzzify output variable 'diferenca' : {'diminuir', 'manter', 'aumentar' }
 DEFUZZIFY acao
     TERM diminuir_muito := (0,1) (1,0);
 	TERM diminuir := (0,0) (2,1) (3,0);
@@ -41,21 +40,21 @@ END_DEFUZZIFY
 
 // Inference rules
 RULEBLOCK No1
+	RULE 1: IF temperatura_1 IS bom OR temperatura_2 IS bom OR temperatura_3 IS bom THEN acao IS manter;
+	RULE 2 : IF temperatura_1 IS frio AND temperatura_2 IS frio AND temperatura_3 IS frio THEN acao IS aumentar_muito;
+	RULE 3 : IF temperatura_1 IS frio AND temperatura_2 IS frio THEN acao IS aumentar;
+	RULE 4 : IF temperatura_1 IS frio AND temperatura_3 IS frio THEN acao IS aumentar;
+	RULE 5 : IF temperatura_2 IS frio AND temperatura_3 IS frio THEN acao IS aumentar;
 
-	RULE 1 : IF temperatura_1 IS frio AND temperatura_2 IS frio AND temperatura_3 IS frio THEN acao IS aumentar_muito;
-	RULE 2 : IF temperatura_1 IS frio AND temperatura_2 IS frio THEN acao IS aumentar;
-	RULE 3 : IF temperatura_1 IS frio AND temperatura_3 IS frio THEN acao IS aumentar;
-	RULE 4 : IF temperatura_2 IS frio AND temperatura_3 IS frio THEN acao IS aumentar;
+	RULE 6 : IF temperatura_1 IS quente AND temperatura_2 IS quente AND temperatura_3 IS quente THEN acao IS diminuir_muito;
+	RULE 7 : IF temperatura_1 IS quente AND temperatura_2 IS quente THEN acao IS diminuir;
+	RULE 8 : IF temperatura_1 IS quente AND temperatura_3 IS quente THEN acao IS diminuir;
+	RULE 9 : IF temperatura_2 IS quente AND temperatura_3 IS quente THEN acao IS diminuir;
 
-	RULE 5 : IF temperatura_1 IS quente AND temperatura_2 IS quente AND temperatura_3 IS quente THEN acao IS diminuir_muito;
-	RULE 6 : IF temperatura_1 IS quente AND temperatura_2 IS quente THEN acao IS diminuir;
-	RULE 7 : IF temperatura_1 IS quente AND temperatura_3 IS quente THEN acao IS diminuir;
-	RULE 8 : IF temperatura_2 IS quente AND temperatura_3 IS quente THEN acao IS diminuir;
-
-	RULE 9 : IF temperatura_1 IS bom AND temperatura_2 IS bom AND temperatura_3 IS bom THEN acao IS manter;
-    RULE 10 : IF temperatura_1 IS bom AND temperatura_2 IS bom THEN acao IS manter;
-    RULE 11 : IF temperatura_1 IS bom AND temperatura_3 IS bom THEN acao IS manter;
-    RULE 12 : IF temperatura_2 IS bom AND temperatura_3 IS bom THEN acao IS manter;
+	RULE 10 : IF temperatura_1 IS bom AND temperatura_2 IS bom AND temperatura_3 IS bom THEN acao IS manter;
+    RULE 11 : IF temperatura_1 IS bom AND temperatura_2 IS bom THEN acao IS manter;
+    RULE 12 : IF temperatura_1 IS bom AND temperatura_3 IS bom THEN acao IS manter;
+    RULE 13 : IF temperatura_2 IS bom AND temperatura_3 IS bom THEN acao IS manter;
 
 END_RULEBLOCK
 
