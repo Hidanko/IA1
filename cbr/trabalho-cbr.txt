@@ -1,0 +1,36 @@
+https://pt.wikipedia.org/wiki/Comparativo_entre_sistemas_gerenciadores_de_bancos_de_dados_relacionais
+
+ADABAS
+DB2
+HSQLDB
+FileMaker
+InterBase
+MariaDB
+Microsoft Access
+Microsoft SQL Server
+MySQL
+Oracle
+PostgreSQL
+SmallSQL
+SQLite
+Teradata
+
+
+
+Licença de Software
+Tempo de mercado (data de lançamento)
+Ultima atualização
+Suporte Windows
+Suporte Linux
+Suporte Mac
+ACID
+Tamanho maximo banco
+Tamanho maximo tabela
+Tamanho maximo linha
+Tamanho maximo Blob
+Hash
+Regex
+Queries em paralelo
+Cursor
+Proteção a força bruta
+Auditoria
